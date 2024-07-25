@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>홈</title>
+<head>
+    <meta charset="utf-8">    
+    <link rel="stylesheet" href="style.css">
+    <script src="smoothe.js"></script>
+    <script>
+        async function requestjson(){
+            let result = await smoothe.get('/myjson');
+            console.log("RESULT:", result);
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOMContentLoaded : index head")
+        });
+    </script>    
+</head>
+
+<body>
+
+<div class="intro"><img src="/solar.jpg"/></div>
+
+<h1>홈</h1>
+<a href="/profile?page=1">프로필</a>
+<a href="/profile?page=2">프로필</a>
+<a href="/profile?page=3">프로필</a>
+
+<div onclick="requestjson()">JSON</div>
+<div onclick="removelistener()">remove event listener</div>
+
+<form id="userForm" name="myform" method="POST" action="/myform?_method=PUT">
+    <input type="text" name="name" value="munjaehyeon" />
+    <input type="text" name="email" value="rebolation@naver.com" />
+    <button type="submit">제출</button>
+</form>
+
+<script>
+    console.log("index")
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOMContentLoaded : index body")
+    });
+</script>
+</body>
+
+</html>

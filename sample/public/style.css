@@ -1,0 +1,11 @@
+body {
+    background: #fff;
+}
+
+.intro {
+    position: absolute;
+    top: 200px;
+}
+.intro img {
+    width: 600px;
+}
