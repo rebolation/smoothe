@@ -1,4 +1,4 @@
-## Smoothe
+## Smoothe.js
 
 #### SPA library for static site
 
